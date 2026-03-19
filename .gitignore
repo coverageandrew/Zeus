@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+.windsurf/
+.cursor/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Projects (client data -- never track)
+/projects/
+
+# Supabase local
+/supabase/
+
+# Secrets / env files
+.env
+.env.*
+!.env.example
+
+# Config directory (runtime-generated)
+/config/
+
+# Working files
+/working-on
+/docs

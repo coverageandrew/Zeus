@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+ui
+*.log
+*.tsbuildinfo
+coverage
+.windsurf
+docs

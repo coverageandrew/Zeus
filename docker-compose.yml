@@ -1,0 +1,34 @@
+services:
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./projects:/projects
+      - ./logs:/logs
+      - ./handoffs:/handoffs
+      - ./config:/config
+    restart: unless-stopped
+
+  core:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./projects:/app/projects
+      - ./logs:/app/logs
+      - ./handoffs:/app/handoffs
+      - ./agents:/app/agents
+      - ./company:/app/company
+      - ./departments:/app/departments
+    restart: "no"
+    profiles:
+      - cli
