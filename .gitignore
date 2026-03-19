@@ -26,8 +26,9 @@ npm-debug.log*
 # Test coverage
 coverage/
 
-# Projects (client data -- never track)
-/projects/
+# Projects (client data -- never track, but keep the directory itself)
+/projects/*
+!/projects/.gitkeep
 
 # Supabase local
 /supabase/
